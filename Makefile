@@ -11,3 +11,7 @@ build:
 	@mkdir -p bin
 	GOOS=linux GOARCH=amd64 CGO_ENABLED=0 \
 		go build -ldflags="-s -w" -trimpath -o bin/app main.go
+
+clean:
+	rm -rf bin
+	rm -rf tmp
